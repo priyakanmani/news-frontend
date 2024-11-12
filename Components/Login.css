@@ -32,8 +32,7 @@ body {
   }
 }
 
-
-
+/* Image Side */
 .image-side {
   flex: 1; /* Take up 50% of the width */
   overflow: hidden; /* Prevent image overflow */
@@ -49,6 +48,7 @@ body {
   filter: brightness(95%); /* Darken the image slightly for better text readability */
 }
 
+/* Form Side */
 .form-side {
   flex: 1; /* Take up 50% of the width */
   display: flex;
@@ -154,7 +154,7 @@ input:focus {
   font-weight: bold;
 }
 
-/* Login.css */
+/* Password Group */
 .password-group {
   position: relative;
 }
@@ -173,4 +173,19 @@ input:focus {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* Hide image on smaller screens */
+@media (max-width: 600px) {
+  .image-side {
+    display: none; /* Hide the image side */
+  }
+
+  /* Adjust form side to take full width on small screens */
+  .form-side {
+    flex: 1;
+    width: 100%; /* Make form side take full width */
+    max-width: none; /* Remove max width if any is set */
+    padding: 20px; /* Adjust padding for smaller screens */
+  }
 }
